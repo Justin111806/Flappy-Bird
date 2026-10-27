@@ -4,7 +4,7 @@ fitness_criterion     = max
 #limiet spelscore, spel stopt wanneer het deze nummer bereikt
 fitness_threshold     = 1000
 #aantal agents
-pop_size              = 30
+pop_size              = 27
 #als een soort species doodgaat, dan eindigt het spel. FALSE, dus niet eindigt spel
 reset_on_extinction   = False
 no_fitness_termination = False

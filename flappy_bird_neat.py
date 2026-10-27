@@ -11,7 +11,7 @@ import os
 import time
 import neat
 #import visualize
-#import pickle
+import pickle
 pygame.font.init()  # init font
 
 WIN_WIDTH = 600
@@ -334,7 +334,7 @@ def eval_genomes(genomes, config):
 
     run = True
     while run and len(birds) > 0:
-        clock.tick(60)
+        clock.tick(1000)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -423,11 +423,11 @@ def run(config_file):
     print('\nBest genome:\n{!s}'.format(winner))
     
     # Save the winner genome to a pickle .pkl file
-    #with open("winner.pkl", "wb") as f:
-    #    pickle.dump(winner, f)
+    with open("winner.pkl", "wb") as f:
+        pickle.dump(winner, f)
     #
     #to play the endgame with only the best bird e.g.
-    #play_with_best_bird("winner.pkl", config)
+    play_with_best_bird("winner.pkl", config)
 
 if __name__ == '__main__':
     # Determine path to configuration file. This path manipulation is
